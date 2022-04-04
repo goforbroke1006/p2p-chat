@@ -39,5 +39,5 @@ func main() {
 	}()
 	go multicast.Send()
 
-	<-time.After(60 * time.Second)
+	<-time.After(10 * time.Minute)
 }
