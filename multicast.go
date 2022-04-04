@@ -20,7 +20,7 @@ type Multicast interface {
 func NewMulticast(username string, host string, port uint16) Multicast {
 	//addr, err := net.ResolveUDPAddr("udp", "224.0.0.0:9999") // Local subnetwork
 	//addr, err := net.ResolveUDPAddr("udp", "233.0.0.0:9999") // GLOP
-	addr, err := net.ResolveUDPAddr("udp", "224.0.1.0:9999") // Global scope
+	addr, err := net.ResolveUDPAddr("udp", "224.0.1.42:9999") // Global scope
 	if err != nil {
 		panic(errors.Wrap(err, "can't resolve address of peer"))
 	}
@@ -84,7 +84,7 @@ func (m multicast) Listen(handler RemotePeerHandler) error {
 		handler(parts[1], parts[2], port)
 	}
 
-	return nil
+	//return nil
 }
 
 func (m multicast) Send() {
