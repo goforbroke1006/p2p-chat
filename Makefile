@@ -13,15 +13,15 @@ test:
 
 
 
-PUBLIC_IP=$(shell curl ipinfo.io/ip)
+PUBLIC_IP=$(shell curl -s ipinfo.io/ip)
 FREE_PORT=$(shell bash freeport.sh)
 #FREE_PORT=16998
 
-setup:
-	sudo ufw allow from any to any port ${FREE_PORT} proto tcp
-	sudo ufw allow from any to any port ${FREE_PORT} proto udp
+#setup:
+#	sudo ufw allow from any to any port ${FREE_PORT} proto tcp
+#	sudo ufw allow from any to any port ${FREE_PORT} proto udp
 	#sudo iptables -A INPUT -p tcp --dport ${FREE_PORT} -j ACCEPT
 	#sudo iptables -A INPUT -p udp --dport ${FREE_PORT} -j ACCEPT
 
 start: build
-	sudo ./p2p-chat foo-bar ${PUBLIC_IP} ${FREE_PORT}
+	./p2p-chat foo-bar ${PUBLIC_IP} ${FREE_PORT}
