@@ -14,6 +14,7 @@ test:
 
 
 PUBLIC_IP=$(shell curl -s ipinfo.io/ip)
+LOCAL_IP=$(shell bash local-ip.sh)
 FREE_PORT=$(shell bash freeport.sh)
 #FREE_PORT=16998
 
@@ -24,4 +25,4 @@ FREE_PORT=$(shell bash freeport.sh)
 	#sudo iptables -A INPUT -p udp --dport ${FREE_PORT} -j ACCEPT
 
 start: build
-	./p2p-chat foo-bar ${PUBLIC_IP} ${FREE_PORT}
+	./p2p-chat foo-bar ${LOCAL_IP} ${FREE_PORT}
