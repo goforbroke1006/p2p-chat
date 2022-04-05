@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+
+  peer-001:
+    hostname: peer001.internal.docker
+    image: docker.io/goforbroke1006/p2p-chat:latest
+    environment:
+      P2P_CHAT_USERNAME: peer001
+      P2P_CHAT_HOST: peer001.internal.docker
+      P2P_CHAT_PORT: 19001
+    volumes:
+      - .docker-compose/peers.txt:/peers.txt
+
+  peer-002:
+    hostname: peer002.internal.docker
+    image: docker.io/goforbroke1006/p2p-chat:latest
+    environment:
+      P2P_CHAT_USERNAME: peer002
+      P2P_CHAT_HOST: peer002.internal.docker
+      P2P_CHAT_PORT: 19002
+    volumes:
+      - .docker-compose/peers.txt:/peers.txt
+
+  peer-003:
+    hostname: peer003.internal.docker
+    image: docker.io/goforbroke1006/p2p-chat:latest
+    environment:
+      P2P_CHAT_USERNAME: peer003
+      P2P_CHAT_HOST: peer003.internal.docker
+      P2P_CHAT_PORT: 19003
+    volumes:
+      - .docker-compose/peers.txt:/peers.txt
+
+  peer-004:
+    hostname: peer004.internal.docker
+    image: docker.io/goforbroke1006/p2p-chat:latest
+    environment:
+      P2P_CHAT_USERNAME: peer004
+      P2P_CHAT_HOST: peer004.internal.docker
+      P2P_CHAT_PORT: 19004
+    volumes:
+      - .docker-compose/peers.txt:/peers.txt
+
+  peer-005:
+    hostname: peer005.internal.docker
+    image: docker.io/goforbroke1006/p2p-chat:latest
+    environment:
+      P2P_CHAT_USERNAME: peer005
+      P2P_CHAT_HOST: peer005.internal.docker
+      P2P_CHAT_PORT: 19005
+    volumes:
+      - .docker-compose/peers.txt:/peers.txt

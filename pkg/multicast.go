@@ -1,4 +1,4 @@
-package p2p_chat
+package pkg
 
 import (
 	"fmt"

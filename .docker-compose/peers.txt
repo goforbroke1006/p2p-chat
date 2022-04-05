@@ -1,0 +1,10 @@
+peer001.internal.docker:19001
+peer002.internal.docker:19002
+peer003.internal.docker:19003
+peer004.internal.docker:19004
+peer005.internal.docker:19005
+peer006.internal.docker:19006
+peer007.internal.docker:19007
+peer008.internal.docker:19008
+peer009.internal.docker:19009
+peer010.internal.docker:19010
